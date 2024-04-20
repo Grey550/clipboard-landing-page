@@ -11,7 +11,7 @@ body {
 }
 
 /* Default styles for mobile */
-.web .web-banner {
+header > .web  {
     display: none;
 }
 .header .mobile {
@@ -249,12 +249,18 @@ ul {
 }
 /* Tablet view */
 @media only screen and (min-width: 768px) {
+    header > .mobile-banner {
+        display: none;
+    }
+    .header .web {
+        width: 100%;
+    }
     figure .logo {
         position: absolute;
         width: 125px;
         height: 125px;
         left: 40%;
-        top: 100%;
+        top: 40%;
     }
     .intro h1 {
         color: #4C545C;
@@ -263,7 +269,7 @@ ul {
         font-weight: 600;
         line-height: normal;
         letter-spacing: -0.75px;
-        padding: 0 20% 0 20%;
+        /* padding: 0 20% 0 20%; */
     }
     .intro p {
         color: #9EABB2;
@@ -291,7 +297,7 @@ ul {
         line-height: 30px; /* 166.667% */
         letter-spacing: 0.5px;
         padding: 15px;
-        width: 30%;
+        width: 40%;
         height: auto;
     }
     .ios-button {
@@ -310,6 +316,10 @@ ul {
         line-height: 30px; /* 166.667% */
         letter-spacing: 0.135px;
         padding: 50px;
+    }
+    .first-section {
+        
+        width: 100%;
     }
     .first-section  figure > .computer-image {
         width: 60%;
@@ -389,31 +399,44 @@ ul {
         padding: 10px;
         width: 20%;
     }
-    /* footer {
-        padding: 20px 0;
-    }  
-    .social-links {
-        display: flex;
-        justify-content: space-between; 
-        margin-top: 10px; 
+    .footer-content {
+        margin-right: 50px;
+        padding: 15px;
+        color: #4C545C;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px; /* 166.667% */
+        letter-spacing: 0.135px;
+        text-align: left;
+    }
+    .footer-content:hover {
+        color: hsl(171, 66%, 44%);
+        cursor: pointer;
+    }
+    .column-three {
+        margin-bottom: 60px;
+
     }
     .social-media-icons {
+        flex: 1; 
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-end; 
+        align-items: center; 
+        margin-right: 100px;
     }
     .media-icons {
-        width: 30px;
-        margin-left: 10px;
-    } */
+        margin-left: 30px; 
+        cursor: pointer;
+    }
 }
 
 /* Web view */
 
 @media only screen and (min-width: 1352px) {
-    .mobile .mobile-banner {
+    header > .mobile {
         display: none;  
     }
-    .web .web-banner {
+    header > .web{
         display: flex;
 
     }
@@ -425,7 +448,6 @@ ul {
         width: 100%;
     }
     figure .logo {
-        /* position: absolute; */
         width: auto;
         height: 125px;
         left: 45%;
